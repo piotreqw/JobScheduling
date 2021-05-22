@@ -54,7 +54,7 @@ def test_simplified_vs_complete_allocation(max_iterations=20, total_tasks_time=4
     print(f' Done', flush=True)
     print(f'Simplified efficiency ratio {100 * (max_iterations - sum(result)) / max_iterations:.1f}%', flush=True)
 
-def test_simplified_vs_complete_simplified_allocation(max_iterations=20, total_tasks_time=450 // 15) -> None:
+def test_simplified_vs_complete_simplified_allocation(max_iterations=20, total_tasks_time=600 // 15) -> None:
     """Function tests simplified allocation algorithm, comparing results to complete allocation
     Result equals to 90% means in 90% of cases tasks couldn't have been allocated to less employees"""
     workspace = Workspace()
@@ -99,4 +99,4 @@ def test_optimized_allocation(total_tasks_time = 300 // 15) -> None:
 
 
 if __name__ == '__main__':
-    test_simplified_vs_complete_simplified_allocation()
+    test_simplified_vs_complete_simplified_allocation() #Efficiency ~95%
